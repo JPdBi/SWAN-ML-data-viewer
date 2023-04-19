@@ -15,11 +15,7 @@ def get_mask(df, low, high, location):
     if location == "All locations":
         mask = (df["Hm0 SWAN"] > low) & (df["Hm0 SWAN"] < high)
     else:
-        mask = (
-            (df["Hm0 SWAN"] > low)
-            & (df["Hm0 SWAN"] < high)
-            & (df["location_name"] == location)
-        )
+        mask = (df["Hm0 SWAN"] > low) & (df["Hm0 SWAN"] < high) & (df["location_name"] == location)
 
     return mask
 
@@ -32,26 +28,26 @@ app.layout = html.Div(
             [
                 dcc.Graph(id="scatter-plot-windspeed"),
             ],
-            style={"width": "40%", "display": "inline-block"},
+            style={"width": "49%", "display": "inline-block"},
         ),
         html.Div(
             [
                 dcc.Graph(id="radial-scatter-wind"),
             ],
-            style={"width": "40%", "display": "inline-block"},
+            style={"width": "49%", "display": "inline-block"},
         ),
         html.Div(
             [
                 dcc.Graph(id="scatter-plot-waveperiod"),
                 html.P("Filter by measured spectral wave height:"),
             ],
-            style={"width": "40%", "display": "inline-block"},
+            style={"width": "49%", "display": "inline-block"},
         ),
         html.Div(
             [
                 dcc.Graph(id="radial-scatter-waves"),
             ],
-            style={"width": "40%", "display": "inline-block"},
+            style={"width": "49%", "display": "inline-block"},
         ),
         html.Div(
             [
@@ -83,7 +79,7 @@ app.layout = html.Div(
                     id="selected_location",
                 ),
             ],
-            style={"width": "80%", "display": "inline-block"},
+            style={"width": "98%", "display": "inline-block"},
         ),
     ]
 )
