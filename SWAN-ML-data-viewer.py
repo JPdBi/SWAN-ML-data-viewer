@@ -29,29 +29,29 @@ app.layout = html.Div(
             [
                 dcc.Graph(id="scatter-plot-windspeed"),
             ],
-            style={"width": "49%", "display": "inline-block"},
+            style={"width": "40vw", "display": "inline-block", "margin-left": "10vw", "height": "40vh"},
         ),
         html.Div(
             [
                 dcc.Graph(id="radial-scatter-wind"),
             ],
-            style={"width": "49%", "display": "inline-block"},
+            style={"width": "40vw", "display": "inline-block", "height": "40vh"},
         ),
         html.Div(
             [
                 dcc.Graph(id="scatter-plot-waveperiod"),
-                html.P("Filter by measured spectral wave height:"),
             ],
-            style={"width": "49%", "display": "inline-block"},
+            style={"width": "40vw", "display": "inline-block", "margin-left": "10vw", "height": "40vh"},
         ),
         html.Div(
             [
                 dcc.Graph(id="radial-scatter-waves"),
             ],
-            style={"width": "49%", "display": "inline-block"},
+            style={"width": "40vw", "display": "inline-block", "height": "40vh"},
         ),
         html.Div(
             [
+                html.P("Filter by measured spectral wave height:"),
                 dcc.RangeSlider(
                     id="range-slider",
                     min=0,
@@ -80,7 +80,7 @@ app.layout = html.Div(
                     id="selected_location",
                 ),
             ],
-            style={"width": "98%", "display": "inline-block"},
+            style={"width": "80vw", "display": "inline-block", "margin-top": "5vh", "margin-left": "10vw", "margin-right": "10vw"},
         ),
     ]
 )
@@ -104,6 +104,7 @@ def update_figure_windspeed(slider_range, location):
     )
     fig.update_xaxes(range=[0, np.ceil(df["Wind speed SWAN"].max())])
     fig.update_yaxes(range=[0, np.ceil(df["Hm0 SWAN"].max())])
+    fig.update_layout(coloraxis_showscale=False)
     return fig
 
 
@@ -124,6 +125,7 @@ def update_figure_radial_wind(slider_range, location):
         color_continuous_scale=px.colors.sequential.Hot,
         range_r=[0, np.ceil(df["Hm0 SWAN"].max())],
     )
+    fig.update_layout(coloraxis_showscale=False)
     return fig
 
 
@@ -145,6 +147,7 @@ def update_figure_waveperiod(slider_range, location):
     )
     fig.update_xaxes(range=[0, np.ceil(df["Tm10 SWAN"].max())])
     fig.update_yaxes(range=[0, np.ceil(df["Hm0 SWAN"].max())])
+    fig.update_layout(coloraxis_showscale=False)
     return fig
 
 
@@ -165,6 +168,7 @@ def update_figure_radial_waves(slider_range, location):
         color_continuous_scale=px.colors.sequential.Hot,
         range_r=[0, np.ceil(df["Hm0 SWAN"].max())],
     )
+    fig.update_layout(coloraxis_showscale=False)
     return fig
 
 
