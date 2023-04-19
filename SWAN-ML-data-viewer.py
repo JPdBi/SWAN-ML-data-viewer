@@ -29,25 +29,25 @@ app.layout = html.Div(
             [
                 dcc.Graph(id="scatter-plot-windspeed"),
             ],
-            style={"width": "40vw", "display": "inline-block", "margin-left": "10vw", "height": "40vh"},
+            style={"width": "40vw", "display": "inline-block", "margin-left": "10vw", "height": "35vh"},
         ),
         html.Div(
             [
                 dcc.Graph(id="radial-scatter-wind"),
             ],
-            style={"width": "40vw", "display": "inline-block", "height": "40vh"},
+            style={"width": "40vw", "display": "inline-block", "height": "35vh"},
         ),
         html.Div(
             [
                 dcc.Graph(id="scatter-plot-waveperiod"),
             ],
-            style={"width": "40vw", "display": "inline-block", "margin-left": "10vw", "height": "40vh"},
+            style={"width": "40vw", "display": "inline-block", "margin-left": "10vw", "height": "35vh"},
         ),
         html.Div(
             [
                 dcc.Graph(id="radial-scatter-waves"),
             ],
-            style={"width": "40vw", "display": "inline-block", "height": "40vh"},
+            style={"width": "40vw", "display": "inline-block", "height": "35vh"},
         ),
         html.Div(
             [
