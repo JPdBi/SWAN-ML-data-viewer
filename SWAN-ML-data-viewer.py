@@ -41,7 +41,13 @@ app.layout = html.Div(
             [
                 dcc.Graph(id="scatter-plot-waveperiod"),
             ],
-            style={"width": "40vw", "display": "inline-block", "margin-left": "10vw", "margin-top": "5vh", "height": "35vh"},
+            style={
+                "width": "40vw",
+                "display": "inline-block",
+                "margin-left": "10vw",
+                "margin-top": "5vh",
+                "height": "35vh",
+            },
         ),
         html.Div(
             [
