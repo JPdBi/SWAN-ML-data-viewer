@@ -80,7 +80,13 @@ app.layout = html.Div(
                     id="selected_location",
                 ),
             ],
-            style={"width": "80vw", "display": "inline-block", "margin-top": "5vh", "margin-left": "10vw", "margin-right": "10vw"},
+            style={
+                "width": "80vw",
+                "display": "inline-block",
+                "margin-top": "5vh",
+                "margin-left": "10vw",
+                "margin-right": "10vw",
+            },
         ),
     ]
 )
