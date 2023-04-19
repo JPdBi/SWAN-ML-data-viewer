@@ -21,6 +21,7 @@ def get_mask(df, low, high, location):
 
 
 app = Dash(__name__)
+server = app.server
 
 app.layout = html.Div(
     [
