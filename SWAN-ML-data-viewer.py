@@ -4,7 +4,7 @@ import pandas as pd
 import numpy as np
 
 
-data_all = pd.read_csv("/content/data_all_density.csv", sep=";", header=0)
+data_all = pd.read_csv("data_all_density.csv", sep=";", header=0)
 
 dropdown_options = data_all["location_name"].unique().tolist()
 dropdown_options.insert(0, "All locations")
