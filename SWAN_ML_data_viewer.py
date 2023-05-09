@@ -21,7 +21,6 @@ def get_mask(df, low, high, location):
 
 
 app = Dash(__name__)
-server = app.server
 
 app.layout = html.Div(
     [
@@ -182,6 +181,3 @@ def update_figure_radial_waves(slider_range, location):
     )
     fig.update_layout(coloraxis_showscale=False)
     return fig
-
-
-app.run_server()
