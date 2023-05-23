@@ -1,8 +1,7 @@
-from dash import Dash, dcc, html, Input, Output
-import plotly.express as px
-import pandas as pd
 import numpy as np
-
+import pandas as pd
+import plotly.express as px
+from dash import Dash, Input, Output, dcc, html
 
 data_all = pd.read_csv("data_all_density.csv", sep=";", header=0)
 
